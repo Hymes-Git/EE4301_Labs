@@ -1,0 +1,9 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/gahym/EE4301_Labs/lab03/lab03.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab03/lab03.srcs/sim_1/new/casino_tb.v,1728921038,verilog,,,,casino_tb,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab03/lab03.srcs/sim_1/new/sevenseg_tb.v,1728660051,verilog,,,,sevenseg_tb,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab03/lab03.srcs/sources_1/imports/sources_1/new/7seg.v,1728060494,verilog,,C:/Users/gahym/EE4301_Labs/lab03/lab03.srcs/sim_1/new/sevenseg_tb.v,,sevenseg,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab03/lab03.srcs/sources_1/new/Casino.v,1728661951,verilog,,C:/Users/gahym/EE4301_Labs/lab03/lab03.srcs/sim_1/new/casino_tb.v,,Casino,,,,,,,,

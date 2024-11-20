@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Sep 13 10:32:54 2024
+# Process ID: 25688
+# Current directory: C:/Users/gahym/EE4301_Labs/lab01/lab01.runs/impl_1
+# Command line: vivado.exe -log RISCVALU.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RISCVALU.tcl -notrace
+# Log file: C:/Users/gahym/EE4301_Labs/lab01/lab01.runs/impl_1/RISCVALU.vdi
+# Journal file: C:/Users/gahym/EE4301_Labs/lab01/lab01.runs/impl_1\vivado.jou
+# Running On: DESKTOP-P2P8PNM, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16495 MB
+#-----------------------------------------------------------
+source RISCVALU.tcl -notrace
+Command: open_checkpoint RISCVALU_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1283.926 ; gain = 0.000
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1283.926 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1325.590 ; gain = 8.504
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1325.590 ; gain = 8.504
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.590 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.1 (64-bit) build 3526262
+open_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1325.590 ; gain = 41.664
+Command: write_bitstream -force RISCVALU.bit -bin_file
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PDRC-153] Gated clock check: Net ALUop_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin ALUop_reg[2]_i_2/O, cell ALUop_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./RISCVALU.bit...
+Writing bitstream ./RISCVALU.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+22 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1802.266 ; gain = 476.676
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 13 10:33:29 2024...

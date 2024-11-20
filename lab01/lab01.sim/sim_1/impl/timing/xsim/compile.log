@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gahym/EE4301_Labs/lab01/lab01.sim/sim_1/impl/timing/xsim/RISCVALU_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISCVALU
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gahym/EE4301_Labs/lab01/lab01.srcs/sim_1/imports/Downloads/RISCV_ALU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISCVALU_tb

@@ -1,0 +1,29 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab05_Top_tb_behav xil_defaultlib.Lab05_Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'in1' [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:65]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'in1' [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'address' [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:74]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.Multiplexor(n=8)
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.instructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ImmediateGenerator
+Compiling module xil_defaultlib.Multiplexor
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.ALU_Controller
+Compiling module xil_defaultlib.ALU_Unit
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.Lab05_Top
+Compiling module xil_defaultlib.Lab05_Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Lab05_Top_tb_behav

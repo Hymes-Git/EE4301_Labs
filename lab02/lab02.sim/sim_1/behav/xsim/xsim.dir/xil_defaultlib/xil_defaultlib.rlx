@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/gahym/EE4301_Labs/lab02/lab02.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sim_1/new/lab02_tb.v,1727739799,verilog,,,,lab02_tb,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sim_1/new/sevensegtest_tb.v,1727452208,verilog,,,,sevensegtest_tb,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sources_1/imports/Lab02/lab2_top.v,1727451485,verilog,,C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sources_1/imports/Lab02/lfsr.v,,lab2_top,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sources_1/imports/Lab02/lfsr.v,1726845823,verilog,,C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sim_1/new/lab02_tb.v,,lfsr,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sources_1/new/7seg.v,1727452490,verilog,,C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sources_1/new/clock_divider.v,,sevenseg,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sources_1/new/clock_divider.v,1726847803,verilog,,C:/Users/gahym/EE4301_Labs/lab02/lab02.srcs/sources_1/imports/Lab02/lab2_top.v,,clock_divider,,,,,,,,

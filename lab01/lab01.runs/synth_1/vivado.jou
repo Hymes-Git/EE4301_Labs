@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Sep 13 10:07:43 2024
+# Process ID: 19532
+# Current directory: C:/Users/gahym/EE4301_Labs/lab01/lab01.runs/synth_1
+# Command line: vivado.exe -log RISCVALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCVALU.tcl
+# Log file: C:/Users/gahym/EE4301_Labs/lab01/lab01.runs/synth_1/RISCVALU.vds
+# Journal file: C:/Users/gahym/EE4301_Labs/lab01/lab01.runs/synth_1\vivado.jou
+# Running On: DESKTOP-P2P8PNM, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16495 MB
+#-----------------------------------------------------------
+source RISCVALU.tcl -notrace

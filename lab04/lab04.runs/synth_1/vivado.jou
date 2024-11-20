@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Oct 25 11:25:59 2024
+# Process ID: 26864
+# Current directory: C:/Users/gahym/EE4301_Labs/lab04/lab04.runs/synth_1
+# Command line: vivado.exe -log MovingText.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MovingText.tcl
+# Log file: C:/Users/gahym/EE4301_Labs/lab04/lab04.runs/synth_1/MovingText.vds
+# Journal file: C:/Users/gahym/EE4301_Labs/lab04/lab04.runs/synth_1\vivado.jou
+# Running On        :LilyLaptop
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 8840HS w/ Radeon 780M Graphics     
+# CPU Frequency     :3293 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16423 MB
+# Swap memory       :19760 MB
+# Total Virtual     :36184 MB
+# Available Virtual :7306 MB
+#-----------------------------------------------------------
+source MovingText.tcl -notrace

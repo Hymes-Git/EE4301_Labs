@@ -1,0 +1,8 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/gahym/EE4301_Labs/lab04/lab04.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab04/lab04.srcs/sim_1/new/movingtext_tb.v,1729903651,verilog,,,,movingtext_tb,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab04/lab04.srcs/sources_1/imports/new/clock_divider.v,1729264620,verilog,,C:/Users/gahym/EE4301_Labs/lab04/lab04.srcs/sim_1/new/movingtext_tb.v,,clock_divider,,,,,,,,
+C:/Users/gahym/EE4301_Labs/lab04/lab04.srcs/sources_1/new/MovingText.v,1729904058,verilog,,C:/Users/gahym/EE4301_Labs/lab04/lab04.srcs/sources_1/imports/new/clock_divider.v,,MovingText,,,,,,,,

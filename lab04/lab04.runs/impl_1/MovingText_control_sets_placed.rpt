@@ -1,0 +1,117 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Oct 25 11:27:04 2024
+| Host         : LilyLaptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MovingText_control_sets_placed.rpt
+| Design       : MovingText
+| Device       : xc7s50
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    39 |
+|    Minimum number of control sets                        |    39 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    18 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    39 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    26 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              27 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              64 |           18 |
+| Yes          | No                    | No                     |             213 |           61 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             214 |           82 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+---------------------------------+-----------------------------+------------------+----------------+--------------+
+|      Clock Signal      |          Enable Signal          |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------+---------------------------------+-----------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG         |                                 |                             |                3 |              4 |         1.33 |
+|  CDIV2/CLK             | leftCathode[6]_i_1_n_0          |                             |                1 |              5 |         5.00 |
+|  mem_reg[0][7]_i_4_n_0 | scrollIndex[4]_i_2_n_0          | clear                       |                1 |              6 |         6.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[2][7]_i_2_n_0               | mem[2][7]_i_1_n_0           |                2 |              8 |         4.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[4][7]_i_2_n_0               | mem[4][7]_i_1_n_0           |                2 |              8 |         4.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[21][7]_i_2_n_0              | mem[21][7]_i_1_n_0          |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 | mem[22][7]_i_2_n_0              | mem[22][7]_i_1_n_0          |                2 |              8 |         4.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[23][7]_i_1_n_0              |                             |                5 |              8 |         1.60 |
+|  mem_reg[0][7]_i_4_n_0 | mem[6][7]_i_2_n_0               | mem[6][7]_i_1_n_0           |                1 |              8 |         8.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[7][7]_i_2_n_0               | mem[7][7]_i_1_n_0           |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 | mem[9][7]_i_2_n_0               | mem[9][7]_i_1_n_0           |                2 |              8 |         4.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[8][7]_i_2_n_0               | mem[8][7]_i_1_n_0           |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 | displayCharacters[3][7]_i_1_n_0 |                             |                7 |              8 |         1.14 |
+|  mem_reg[0][7]_i_4_n_0 | mem[10][7]_i_2_n_0              | mem[10][7]_i_1_n_0          |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 | mem[0][7]_i_2_n_0               | mem[0][7]_i_1_n_0           |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 | mem[5][7]_i_2_n_0               | mem[5][7]_i_1_n_0           |                5 |              8 |         1.60 |
+|  mem_reg[0][7]_i_4_n_0 | mem[11][7]_i_2_n_0              | mem[11][7]_i_1_n_0          |                6 |              8 |         1.33 |
+|  mem_reg[0][7]_i_4_n_0 | mem[14][7]_i_2_n_0              | mem[14][7]_i_1_n_0          |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 | mem[15][7]_i_2_n_0              | mem[15][7]_i_1_n_0          |                1 |              8 |         8.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[13][7]_i_2_n_0              | mem[13][7]_i_1_n_0          |                5 |              8 |         1.60 |
+|  mem_reg[0][7]_i_4_n_0 | mem[12][7]_i_2_n_0              | mem[12][7]_i_1_n_0          |                1 |              8 |         8.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[18][7]_i_2_n_0              | mem[18][7]_i_1_n_0          |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 | mem[20][7]_i_2_n_0              | mem[20][7]_i_1_n_0          |                2 |              8 |         4.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[16][7]_i_2_n_0              | mem[16][7]_i_1_n_0          |                2 |              8 |         4.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[1][7]_i_2_n_0               | mem[1][7]_i_1_n_0           |                2 |              8 |         4.00 |
+|  mem_reg[0][7]_i_4_n_0 | mem[17][7]_i_2_n_0              | mem[17][7]_i_1_n_0          |                5 |              8 |         1.60 |
+|  mem_reg[0][7]_i_4_n_0 | mem[19][7]_i_2_n_0              | mem[19][7]_i_1_n_0          |                5 |              8 |         1.60 |
+|  mem_reg[0][7]_i_4_n_0 | mem[3][7]_i_2_n_0               | mem[3][7]_i_1_n_0           |                3 |              8 |         2.67 |
+|  mem_reg[0][7]_i_4_n_0 |                                 |                             |                6 |              9 |         1.50 |
+|  CDIV2/CLK             |                                 |                             |                5 |             14 |         2.80 |
+|  mem_reg[0][7]_i_4_n_0 | displayState                    | displayCharacters           |               14 |             24 |         1.71 |
+|  clk_IBUF_BUFG         |                                 | CDIV2/sel0[34]              |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG         |                                 | CDIV3/count0[31]_i_1__0_n_0 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG         | CDIV2/count30                   |                             |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG         | CDIV3/count1[0]_i_1__0_n_0      |                             |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG         | CDIV3/count2[0]_i_1__0_n_0      |                             |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG         | CDIV3/count3[0]_i_1__0_n_0      |                             |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG         | CDIV2/count1[0]_i_1_n_0         |                             |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG         | CDIV2/count2[0]_i_1_n_0         |                             |                8 |             32 |         4.00 |
++------------------------+---------------------------------+-----------------------------+------------------+----------------+--------------+
+
+

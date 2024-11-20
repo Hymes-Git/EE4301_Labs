@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lab01.srcs/sources_1/new/RISCV_ALU.v" \
+"../../../../lab01.srcs/sim_1/imports/Downloads/RISCV_ALU_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
