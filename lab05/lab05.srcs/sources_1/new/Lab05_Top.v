@@ -46,6 +46,8 @@ module Lab05_Top(
     
     wire [31:0] DataMemOut;
     
+    wire dividedclk;
+    
     wire Branch;
     wire MemRead;
     wire MemToReg;
@@ -59,21 +61,22 @@ module Lab05_Top(
     
     assign led = {Branch, MemRead, MemToReg, ALUOP1, ALUOP0, MemWrite, ALUSrc, RegWrite, x6RegContents};
     
-    ProgramCounter PC (PCIncrement, muxToPC, PCValue);
+    ProgramCounter PC (PCIncrement, dividedclk, muxToPC, PCValue);
     Multiplexor  #(.n(8)) PCMux (muxToPC, PCAdd4, PCBranchResult, BranchOrNot);
     and doBranch (BranchOrNot, Branch, Zero);
     //Adder branchAdder (ImmediateOut, PCValue, PCBranchResult);
     Adder branchAdder (ImmediateOut, PCAdd4, PCBranchResult);
     Adder PCAdder (4, PCValue, PCAdd4);
     instructionMemory iMem (PCValue, instruction);
-    Registers regs (PCIncrement, instruction[19:15], instruction [24:20], instruction [11:7], regDataIn, RegWrite, regReadData1, regReadData2, x6RegContents);
+    Registers regs (PCIncrement, dividedclk, instruction[19:15], instruction [24:20], instruction [11:7], regDataIn, RegWrite, regReadData1, regReadData2, x6RegContents);
     ImmediateGenerator immGen (instruction, ImmediateOut);
     Multiplexor #(.n(32)) ALUInMux (ALUMuxOut, regReadData2, ImmediateOut, ALUSrc);
     Controller control (instruction[6:0], Branch, MemRead, MemToReg, ALUOP1, ALUOP0, MemWrite, ALUSrc, RegWrite);
     ALU_Controller AluCtrl ({ALUOP1, ALUOP0}, instruction[14:12], instruction[30], ALUOpCtrlOut);
     ALU_Unit alu (ALUOpCtrlOut, regReadData1, ALUMuxOut, Zero, ALUResult);
-    DataMemory dataMem (PCIncrement, ALUResult, regReadData2, MemWrite, DataMemOut);
+    DataMemory dataMem (PCIncrement, dividedclk, ALUResult, regReadData2, MemWrite, DataMemOut);
     Multiplexor #(.n(32)) muxToRegister (regDataIn, ALUResult, DataMemOut, MemToReg);
+    clock_divider #(70) divider (clk, dividedclk);
     
 endmodule
 
@@ -163,7 +166,8 @@ module Adder (
 endmodule
 
 module ProgramCounter (
-    input pretendClock,
+    input PCIncrement,
+    input clk,
     input [7:0] newCounter,
     output [7:0] counterOut
 );
@@ -176,9 +180,13 @@ module ProgramCounter (
         programCounter <= 0;
     end
     
-    always @ (posedge pretendClock) begin
+    always @ (posedge clk) begin
     
-        programCounter <= newCounter;
+        if (PCIncrement) begin 
+    
+            programCounter <= newCounter;
+            
+        end
     end
 
 endmodule
@@ -320,7 +328,8 @@ module ALU_Unit (
 endmodule
 
 module Registers (
-    input pretendClock,
+    input PCIncrement,
+    input clk,
     input [4:0] readRegister1,
     input [4:0] readRegister2,
     input [4:0] writeRegister,
@@ -347,16 +356,20 @@ module Registers (
     
     end
     
-    always @ (posedge pretendClock) begin     
-        if (regWrite) begin
-            registers[writeRegister] = writeData;
-        end   
+    always @ (posedge clk) begin  
+    
+        if (PCIncrement) begin   
+            if (regWrite) begin
+                registers[writeRegister] = writeData;
+            end   
+        end
     end
     
 endmodule
 
 module DataMemory (
-    input pretendClock,
+    input PCIncrement,
+    input clk,
     input [7:0] address,
     input [31:0] writeData,
     input writeMem,
@@ -387,12 +400,15 @@ module DataMemory (
     
     end
     
-    always @ (posedge pretendClock) begin   
-        if (writeMem) begin
-            dataMem[address] = writeData[7:0];
-            dataMem[address+1] = writeData[15:8];        
-            dataMem[address+2] = writeData[23:16];
-            dataMem[address+3] = writeData[31:24];
+    always @ (posedge clk) begin   
+    
+        if (PCIncrement) begin
+            if (writeMem) begin
+                dataMem[address] = writeData[7:0];
+                dataMem[address+1] = writeData[15:8];        
+                dataMem[address+2] = writeData[23:16];
+                dataMem[address+3] = writeData[31:24];
+            end
         end
     end
 
@@ -426,3 +442,42 @@ module instructionMemory (
     end
 
 endmodule
+
+module clock_divider (input cin, output cout); 
+parameter timeconst = 84;//constant 
+integer count0; 
+integer count1; 
+integer count2; 
+integer count3; 
+reg d; 
+reg cout; 
+
+initial begin 
+    count0=0; 
+    count1=0; 
+    count2=0; 
+    count3=0; 
+    d = 0; 
+end 
+always @ (posedge cin )begin 
+    count0 <= (count0 + 1); 
+    if ((count0 == timeconst))begin 
+        count0 <= 0; 
+        count1 <= (count1 + 1); 
+    end 
+    else if ((count1 == timeconst)) begin 
+        count1 <= 0; 
+        count2 <= (count2 + 1); 
+    end 
+    else if ((count2 == timeconst)) begin 
+        count2 <= 0; 
+        count3 <= (count3 + 1); 
+    end 
+    else if ((count3 == timeconst)) begin 
+        count3 <= 0; 
+        d <= ~ (d); 
+    end 
+    cout <= d; 
+end 
+    
+endmodule 

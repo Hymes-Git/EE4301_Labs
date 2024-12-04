@@ -22,22 +22,24 @@
 
 module Lab05_Top_tb();
 
+    reg clk;
     reg PCIncrement;
     wire [15:0] led;
     
-    Lab05_Top test (PCIncrement, led);
+    Lab05_Top test (clk, PCIncrement, led);
     
     initial begin
     
-        PCIncrement = 0;
+        PCIncrement = 1;
+        clk = 0;
     
     end    
     
     
     always begin
     
-        #20 PCIncrement = 1;
-        #20 PCIncrement = 0;
+        #20 clk = 1;
+        #20 clk = 0;
     
     end
 

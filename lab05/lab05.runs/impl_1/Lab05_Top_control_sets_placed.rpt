@@ -1,0 +1,381 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Nov 22 19:39:55 2024
+| Host         : LilyLaptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Lab05_Top_control_sets_placed.rpt
+| Design       : Lab05_Top
+| Device       : xc7s50
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   303 |
+|    Minimum number of control sets                        |   303 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    56 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   303 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |   257 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    38 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             122 |           57 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              38 |           13 |
+| Yes          | No                    | No                     |            3184 |         1902 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+--------------------------------+----------------------------+------------------+----------------+--------------+
+|          Clock Signal          |          Enable Signal         |      Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------+--------------------------------+----------------------------+------------------+----------------+--------------+
+|  control/Branch_reg/G0         |                                |                            |                1 |              1 |         1.00 |
+|  control/ALUOp1_reg/G0         |                                |                            |                1 |              1 |         1.00 |
+|  control/RegWrite_reg/G0       |                                |                            |                1 |              1 |         1.00 |
+|  AluCtrl/ALUOpOut_reg[1]_0     |                                | AluCtrl/ALUOpOut_reg[1]_1  |                1 |              1 |         1.00 |
+|  PC/programCounter_reg[3]_4    |                                | PC/programCounter_reg[3]_3 |                1 |              1 |         1.00 |
+|  PC/programCounter_reg[4]_3    |                                | PC/programCounter_reg[1]_1 |                1 |              2 |         2.00 |
+|  PC/E[0]                       |                                | control/AR[0]              |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                 |                                |                            |                1 |              2 |         2.00 |
+|  dividedclk_BUFG               | PCIncrement_IBUF               |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__3_4[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__7_0[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__6_1[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__4_3[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__3_3[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__7_2[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__6_3[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__7_1[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__6_0[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__6_2[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__4_1[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__4_5[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__5_0[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__4_4[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[2]_rep__7_3[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/E[0]                       |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/ALUOut_reg[3]_rep__4_2[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_4[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_14[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_1[0]   |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_0[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_3[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_8[0]   |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_11[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_7[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_12[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_9[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_10[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_13[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_5[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_15[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_6[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[127][7]_i_3_2[0]   |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_14[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_12[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_7[0]   |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_4[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_1[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_10[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_2[0]   |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_5[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_0[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_15[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_3[0]   |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_9[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_6[0]   |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_11[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_13[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[191][7]_i_3_8[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_135[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_1[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_136[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_138[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_139[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_137[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_113[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_107[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_101[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_11[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_103[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_111[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_116[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_120[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_129[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_121[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_130[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_105[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_118[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_108[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_119[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_106[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_117[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3[0]     |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_109[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_114[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_123[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_0[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_124[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_126[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_128[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_13[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_131[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_115[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_127[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_104[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_110[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_10[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_12[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_122[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_132[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_133[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_125[0] |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_100[0] |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_112[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_134[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_102[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_25[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_16[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_166[0] |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_178[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_181[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_168[0] |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_158[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_163[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_186[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_26[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_161[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_146[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_174[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_152[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_140[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_148[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_160[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_143[0] |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_157[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_173[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_183[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_159[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_155[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_165[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_171[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_187[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_15[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_162[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_182[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_188[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_180[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_189[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_154[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_19[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_2[0]   |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_141[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_175[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_184[0] |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_21[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_164[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_20[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_22[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_142[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_167[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_14[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_169[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_153[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_172[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_150[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_156[0] |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_149[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_179[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_144[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_177[0] |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_170[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_185[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_18[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_23[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_24[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_145[0] |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_17[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_176[0] |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_151[0] |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_147[0] |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_43[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_68[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_6[0]   |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_76[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_65[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_32[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_4[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_27[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_31[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_54[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_30[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_40[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_57[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_58[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_77[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_34[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_42[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_81[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_35[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_48[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_44[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_3[0]   |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_49[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_51[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_52[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_55[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_7[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_37[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_70[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_72[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_33[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_74[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_41[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_53[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_45[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_69[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_79[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_8[0]   |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_80[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_56[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_59[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_84[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_67[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_47[0]  |                            |                1 |              8 |         8.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_46[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_50[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_66[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_64[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_29[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_5[0]   |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_28[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_60[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_71[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_39[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_62[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_73[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_61[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_75[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_78[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_38[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_82[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_83[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_36[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_63[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_97[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_91[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_5[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_13[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_4[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_94[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_99[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_3[0]   |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_98[0]  |                            |                8 |              8 |         1.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_89[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_7[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_96[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_2[0]   |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_87[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_0[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_11[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_95[0]  |                            |                2 |              8 |         4.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_86[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_90[0]  |                            |                6 |              8 |         1.33 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_1[0]   |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_9[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_88[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_6[0]   |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_93[0]  |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_85[0]  |                            |                4 |              8 |         2.00 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_15[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_14[0]  |                            |                5 |              8 |         1.60 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_9[0]   |                            |                7 |              8 |         1.14 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_3_92[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_8[0]   |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_10[0]  |                            |                3 |              8 |         2.67 |
+|  dividedclk_BUFG               | alu/dataMem[255][7]_i_4_12[0]  |                            |                3 |              8 |         2.67 |
+|  PC/programCounter_reg[4]_0[0] |                                |                            |               10 |             21 |         2.10 |
+|  dividedclk_BUFG               | PC/PCIncrement_3[0]            |                            |               17 |             32 |         1.88 |
+|  dividedclk_BUFG               | PC/PCIncrement_13[0]           |                            |               17 |             32 |         1.88 |
+|  dividedclk_BUFG               | PC/PCIncrement_10[0]           |                            |               19 |             32 |         1.68 |
+|  dividedclk_BUFG               | PC/PCIncrement_21[0]           |                            |               19 |             32 |         1.68 |
+|  dividedclk_BUFG               | PC/PCIncrement_24[0]           |                            |               24 |             32 |         1.33 |
+|  dividedclk_BUFG               | PC/PCIncrement_30[0]           |                            |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                 | divider/count30                |                            |                8 |             32 |         4.00 |
+|  dividedclk_BUFG               | PC/PCIncrement_15[0]           |                            |               22 |             32 |         1.45 |
+|  dividedclk_BUFG               | PC/PCIncrement_16[0]           |                            |               25 |             32 |         1.28 |
+|  dividedclk_BUFG               | PC/PCIncrement_0[0]            |                            |               14 |             32 |         2.29 |
+|  dividedclk_BUFG               | PC/PCIncrement_17[0]           |                            |               18 |             32 |         1.78 |
+|  dividedclk_BUFG               | PC/PCIncrement_2[0]            |                            |               20 |             32 |         1.60 |
+|  dividedclk_BUFG               | PC/PCIncrement_19[0]           |                            |               19 |             32 |         1.68 |
+|  dividedclk_BUFG               | PC/PCIncrement_12[0]           |                            |               21 |             32 |         1.52 |
+|  dividedclk_BUFG               | PC/PCIncrement_20[0]           |                            |               19 |             32 |         1.68 |
+|  dividedclk_BUFG               | PC/PCIncrement_25[0]           |                            |               28 |             32 |         1.14 |
+|  dividedclk_BUFG               | PC/PCIncrement_1[0]            |                            |               18 |             32 |         1.78 |
+|  dividedclk_BUFG               | PC/PCIncrement_22[0]           |                            |               22 |             32 |         1.45 |
+|  dividedclk_BUFG               | PC/PCIncrement_18[0]           |                            |               15 |             32 |         2.13 |
+|  dividedclk_BUFG               | PC/PCIncrement_23[0]           |                            |               14 |             32 |         2.29 |
+|  dividedclk_BUFG               | PC/PCIncrement_26[0]           |                            |               17 |             32 |         1.88 |
+|  dividedclk_BUFG               | PC/PCIncrement[0]              |                            |               14 |             32 |         2.29 |
+|  dividedclk_BUFG               | PC/PCIncrement_27[0]           |                            |               22 |             32 |         1.45 |
+|  dividedclk_BUFG               | PC/PCIncrement_11[0]           |                            |               21 |             32 |         1.52 |
+|  dividedclk_BUFG               | PC/PCIncrement_14[0]           |                            |               19 |             32 |         1.68 |
+|  dividedclk_BUFG               | PC/PCIncrement_28[0]           |                            |               18 |             32 |         1.78 |
+|  dividedclk_BUFG               | PC/PCIncrement_6[0]            |                            |               14 |             32 |         2.29 |
+|  dividedclk_BUFG               | PC/PCIncrement_8[0]            |                            |               20 |             32 |         1.60 |
+|  dividedclk_BUFG               | PC/PCIncrement_9[0]            |                            |               22 |             32 |         1.45 |
+|  dividedclk_BUFG               | PC/PCIncrement_7[0]            |                            |               18 |             32 |         1.78 |
+|  dividedclk_BUFG               | PC/PCIncrement_5[0]            |                            |               18 |             32 |         1.78 |
+|  dividedclk_BUFG               | PC/PCIncrement_29[0]           |                            |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG                 |                                | divider/count0[31]_i_1_n_0 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                 | divider/count1[0]_i_1_n_0      |                            |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                 | divider/count2[0]_i_1_n_0      |                            |                8 |             32 |         4.00 |
+|  dividedclk_BUFG               | PC/PCIncrement_4[0]            |                            |               30 |             40 |         1.33 |
+| ~ALUOpCtrlOut_BUFG[1]          |                                |                            |               43 |             96 |         2.23 |
++--------------------------------+--------------------------------+----------------------------+------------------+----------------+--------------+
+
+

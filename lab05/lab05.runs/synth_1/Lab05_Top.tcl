@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -71,7 +70,10 @@ set_property ip_output_repo c:/Users/gahym/EE4301_Labs/lab05/lab05.cache/ip [cur
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v
+read_verilog -library xil_defaultlib {
+  C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/imports/new/clock_divider.v
+  C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

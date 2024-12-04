@@ -1,0 +1,76 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Nov 22 19:40:21 2024
+| Host         : LilyLaptop running 64-bit major release  (build 9200)
+| Command      : report_drc -file Lab05_Top_drc_routed.rpt -pb Lab05_Top_drc_routed.pb -rpx Lab05_Top_drc_routed.rpx
+| Design       : Lab05_Top
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 8
++----------+----------+-------------------+------------+
+| Rule     | Severity | Description       | Violations |
++----------+----------+-------------------+------------+
+| PDRC-153 | Warning  | Gated clock check | 8          |
++----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net AluCtrl/ALUOpOut_reg[1]_0 is a gated clock net sourced by a combinational pin AluCtrl/zero_reg_i_2/O, cell AluCtrl/zero_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net PC/E[0] is a gated clock net sourced by a combinational pin PC/ALUOpOut_reg[1]_i_2/O, cell PC/ALUOpOut_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net PC/programCounter_reg[3]_4 is a gated clock net sourced by a combinational pin PC/MemWrite_reg_i_2/O, cell PC/MemWrite_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net PC/programCounter_reg[4]_0[0] is a gated clock net sourced by a combinational pin PC/immediate_reg[20]_i_2/O, cell PC/immediate_reg[20]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net PC/programCounter_reg[4]_3 is a gated clock net sourced by a combinational pin PC/MemRead_reg_i_2/O, cell PC/MemRead_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net control/ALUOp1_reg/G0 is a gated clock net sourced by a combinational pin control/ALUOp1_reg/L3_2/O, cell control/ALUOp1_reg/L3_2 (in control/ALUOp1_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net control/Branch_reg/G0 is a gated clock net sourced by a combinational pin control/Branch_reg/L3_2/O, cell control/Branch_reg/L3_2 (in control/Branch_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net control/RegWrite_reg/G0 is a gated clock net sourced by a combinational pin control/RegWrite_reg/L3_2/O, cell control/RegWrite_reg/L3_2 (in control/RegWrite_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Nov 18 10:28:48 2024
-# Process ID: 27496
+# Start of session at: Fri Nov 22 19:39:19 2024
+# Process ID: 28872
 # Current directory: C:/Users/gahym/EE4301_Labs/lab05/lab05.runs/impl_1
 # Command line: vivado.exe -log Lab05_Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Lab05_Top.tcl -notrace
 # Log file: C:/Users/gahym/EE4301_Labs/lab05/lab05.runs/impl_1/Lab05_Top.vdi
@@ -19,6 +19,6 @@
 # Host memory       :16423 MB
 # Swap memory       :19327 MB
 # Total Virtual     :35751 MB
-# Available Virtual :15518 MB
+# Available Virtual :11202 MB
 #-----------------------------------------------------------
 source Lab05_Top.tcl -notrace

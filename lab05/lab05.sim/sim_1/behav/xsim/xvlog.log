@@ -2,20 +2,20 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gahym/EE4301_Labs/lab05/la
 INFO: [VRFC 10-311] analyzing module Lab05_Top
 INFO: [VRFC 10-311] analyzing module Controller
 INFO: [VRFC 10-311] analyzing module Adder
-WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:153]
-WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:154]
-WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:155]
+WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:157]
+WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:158]
+WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:159]
 INFO: [VRFC 10-311] analyzing module ProgramCounter
 INFO: [VRFC 10-311] analyzing module Multiplexor
-WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:186]
-WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:187]
-WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:188]
+WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:195]
+WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:196]
+WARNING: [VRFC 10-3380] identifier 'n' is used before its declaration [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:197]
 INFO: [VRFC 10-311] analyzing module ImmediateGenerator
-WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:226]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:235]
 INFO: [VRFC 10-311] analyzing module ALU_Controller
 INFO: [VRFC 10-311] analyzing module ALU_Unit
 INFO: [VRFC 10-311] analyzing module Registers
 INFO: [VRFC 10-311] analyzing module DataMemory
 INFO: [VRFC 10-311] analyzing module instructionMemory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sim_1/new/Lab05_Top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Lab05_Top_tb
+INFO: [VRFC 10-311] analyzing module clock_divider
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cout' is not allowed [C:/Users/gahym/EE4301_Labs/lab05/lab05.srcs/sources_1/new/Lab05_Top.v:453]
